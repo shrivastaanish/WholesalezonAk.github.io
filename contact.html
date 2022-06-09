@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/stylesheet.css">
+    <title> Contact Us</title>
+</head>
+<body>
+<header class="topbar"> 
+    <div class="Container">
+      <!--👇 Below we have created a left portion of the top bar -->
+       <div class="icons"> 
+           <a href="#"><img src="/icons/facebook.svg" alt="Facebook">  </a>
+           <a href="#"><img src="/icons/twitter.svg" alt="twitter">  </a>
+           <a href="#"><img src="/icons/instagram.svg" alt="instagram">  </a>
+           <a href="#"><img src="/icons/google.svg" alt="google">  </a>
+           <a href="#"><img src="/icons/search.svg" alt="search">  </a>
+       </div>
+       <!-- 👇 Below we have created a right portion of a topbar-->
+       <div class="auth">
+           <div>
+               <img src="/icons/user-icon.svg" alt="user-icon">
+               <a href="#">Log in</a>
+<!-- Here 👇 we have added a span tag hold the divider -->
+               <span class="divider">|</span>
+
+               <img src="/icons/edit.svg" alt="Register Now">
+               <a href="#">Register Now</a>
+            <!-- Here 👇 we have added a span tag hold the divider -->
+                <span class="divider">|</span>
+
+                <img src="/icons/cart.svg" alt="cart">
+                <a href="#">0 Items - ($0.00)</a>
+           </div>
+                  
+        </div>
+     </div>
+</header>
+<!--👇 Below we will create a navigation bar -->
+<nav>
+    <div class="top">
+        <div class="Container flex justify-between" >
+<!--👇 Here we have created the three div's to hold the contact area ,logo and working hours -->
+         <div class="Contact flex items-center">
+             <img src="/icons/phone.svg" alt="phone">
+             <div>
+                 <h5>Call US:(+91) 987 843 4463</h5>
+                 <h6>E-mail : shrivastaanish@gmail.com</h6>
+             </div>
+         </div>
+
+         <div class="logo">
+             <img src="/Logo.png" height="250px" width = "290px" alt="logo">
+         </div>
+
+         <div class="working-hours flex items-center ">
+
+              <img src="/icons/clock.svg" alt="phone">
+              <div class="time ">
+                <h5>working hours</h5>
+                <h6>Mon - Sat (8.00am - 10.00pm )</h6>
+              </div> 
+
+         </div>
+       </div>
+    </div>
+    <!-- Here the top bar ends .now we will start coding for menu bar👇 -->
+    <div class="menubar ">
+        <div class="container flex justify-center">
+            <!-- To make the active link yellow for that we will be applying the class active in the anchor tag -->
+            <a href="index.html" >Home</a>
+            <a href="About .html" >About us</a>
+            <a href="Products.html">Products</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Shop.html" >Shop</a>
+           
+           
+            <a href="contact.html" class="active">Contact us</a>
+
+        </div>
+    </div>
+</nav> 
+
+<header class="BlogFront "><!--Here flex item-center will shift the content to the center  -->
+    <div class="BlogContainer">
+      <div class="BlogHeading">
+        <h2>Contact Us</h2>
+        <span># To know more contact us</span>
+      </div>
+       
+      
+     </div>
+  </header>
+  <section class="contact-details">
+      <div class="details">
+          <span>GET IN TOUCH</span>
+          <h3>Visit our agency location</h3>
+          
+          <p><strong style="color:#EEBF00;">Address:</strong> 1091 New Chandigarh Road , 160014 , Dhanas Chandigarh</p>
+          <p><strong style="color:#EEBF00;">Phone:</strong> (+91) 987 843 4463</p>
+          <p><strong style="color:#EEBF00;">working hours:</strong> Mon - Sat (8.00am - 10.00pm )</p><br>
+           </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13712.916782308776!2d76.7405545751504!3d30.768146143474226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ff20c7922eb27%3A0xd6c0a42fb2c4eecb!2sDhanas%2C%20Chandigarh%2C%20160014!5e0!3m2!1sen!2sin!4v1654183568133!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+  </section>
+  <section class="form-details">
+    <form action="connect.php" method="post">
+      <legend>
+        
+      </legend>
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name" name="User_Name "><br><br>
+      <input type="email" placeholder="Your Email" name="User_Email "><br><br>
+      <input type="tel" placeholder="Mobile No" name="Contact_No" pattern ="[0-9]{3}[0-9]{3}[0-9]{4}"><br><br>
+      <input type="text" placeholder=" Subject" name="subject "><br><br>
+     
+      <button class="butn butn-secondary" name ="submit" value=" Submit">Submit</button>
+    </form>
+
+  </section>
+        <!-- 👇Here we have created the Subscribe Section -->
+          <div class="Subscribe">
+            <div class="Container flex flex items-center justify-between">
+              <div>
+                <img src="/images/img/products/label-2016248_1280-removebg.png"  height="250px" width = "290px"  alt="Subscribe image" >
+              </div>
+              <!-- Subscribe Input Container -->
+              <div>
+                <h1>Sign Up For Newsletter</h1>
+                <p> Get E-mail updates about our latest<b> offer's</b> and <b>sales</b>.</p>
+                <!-- Creating the input button for Email -->
+                <div class="input-wrap">
+                  <input type="email" placeholder="email@wholesalezonAk.com">
+                  <button>Subscribe</button>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!--FOOTER SECTION -->
+          <footer class="Footer">
+            <div class="col">
+              <img src="/Brand.png" height="200px" width = "310px" alt="logo">
+              <h4 style="color:#e7bb09; font-size: 0.5cm; padding-bottom: 0.5rem;">Contact us</h4>
+              <p><strong style="color:#EEBF00;">Address:</strong> 1091 New Chandigarh Road , 160014 , Dhanas Chandigarh</p>
+              <p><strong style="color:#EEBF00;">Phone:</strong> (+91) 987 843 4463</p>
+              <p><strong style="color:#EEBF00;">working hours:</strong> Mon - Sat (8.00am - 10.00pm )</p><br>
+               <div class="Follow">
+                 <h3 >Follow us</h3>
+                 <div class="icons">
+                   <i><a href="#"><img src="/icons/facebook.svg"alt="Facebook">  </a></i>
+                   <i><a href="#"><img src="/icons/twitter.svg"alt="twitter">  </a></i>
+                   <i><a href="#"><img src="/icons/instagram.svg"alt="instagram"> </a></i>
+                   <i><a href="#"><img src="/icons/google.svg"alt="google">  </a></i>
+                   <i><a href="#"><img src="/icons/search.svg"alt="search">  </a></i>
+                  </div>
+                </div> 
+              </div>
+             <!-- Second Column of THE FOOTER -->
+             <div class="col">  
+               <h3>About</h3>
+               <a href="#">About us</a>
+               <a href="#">Delivery Information</a>
+               <a href="#">Privacy Policy</a>
+               <a href="#">Terms & Conditions</a>
+               <a href="#">Contact us</a>
+             </div>
+                <!-- Third Column of THE FOOTER -->
+             <div class="col">
+              <h3>My Account</h3>
+              <a href="#">Sign In</a>
+              <a href="#">View Cart</a>
+              <a href="#">My Wishlist</a>
+              <a href="#">My Order</a>
+              <a href="#">Help</a>
+            </div>
+            <!-- Third Column Of THE FOOTER -->
+            <div class="col">
+              <div class="install">
+                <h3>Install App</h3>
+                <p>From App Store or Google Play</p>
+                <div class="frow">
+                  <img src="/images/img/pay/app.jpg" alt="App store">
+                  <img src="/images/img/pay/play.jpg" alt="Play Store">
+                  <p>Secured Payment Gteways </p>
+                  <img src="/images/img/pay/pay.png" alt="Pay">
+                </div>
+              </div>
+            </div>
+            
+           </footer>
+     
+ 
+ </body>
+ </html> 
+                 
+                  
+                  
+                 
+                  
+               

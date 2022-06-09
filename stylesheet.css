@@ -1,0 +1,925 @@
+/* Including all the  Google fonts here 👇*/
+@font-face{
+    font-family: "Raleway-Regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+     
+}
+@font-face{
+    font-family: "Raleway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+     
+} 
+@font-face{
+    font-family: "Raleway-Bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+     
+}
+@font-face{
+    font-family: "Raleway-ExtraBold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+     
+}
+@font-face{
+    font-family: "Raleway-Semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+     
+}
+@font-face{
+    font-family: "Raleway-Black";
+    src: url(../fonts/Raleway-Black.ttf);
+     
+}
+/*👆 Above code imports the all fonts styles that can be used to style the webpage */
+
+/* 👇 Here the different color has been kept in a variable so that it can be used any where in the webpage with 
+use of variable name only*/
+
+:root{
+
+    --primary:#EEBF00;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+
+/*Reset the default browser page by using  universal operator that selects the whole element(*)*/
+*{
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+}
+/*👇 Below we have created the container-class to hold the front webpage */
+.Container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;/* This will asign the page into center*/
+}
+/* 👇 In the below code we have adjusted the webpage container in such way that it can be open in all type of devices*/
+@media(min-width:576px)
+{
+ .Container{
+     max-width: 540px;
+ }
+
+}
+
+@media(min-width:768px)
+{
+ .Container{
+     max-width: 720px;
+ }
+
+}
+
+@media(min-width:992px)
+{
+ .Container{
+     max-width: 960px;
+ }
+
+}
+@media(min-width:1200px)
+{
+ .Container{
+     max-width: 1152px;
+ }
+
+}
+body{
+    /* To make the written text look smooth */
+    -webkit-font-smoothing:antialiased;
+}
+/* Now from here onwords we will edit topbar*/
+header.topbar{
+
+    background-color:var(--secondary);
+    color: var(--pure);
+    font-family: "Raleway-semibold";
+    padding: 0.70rem 0;
+}
+
+/* 👇 Below we have edited the links of the top bar*/
+header.topbar .auth> div a {
+    color:var(--pure);
+    /* Below code remves the underline from link*/
+    text-decoration: none;
+    margin-right: 0.6rem;
+}
+
+/* Below code will adjust the two left and right portion to their respective postion*/
+header.topbar .Container{
+    /* The flex property will shift the right top portion to a certain distance */
+    display: flex;
+    /* The justify content property will shift the whole content to the right side of the topbar */
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.topbar .icons> a {
+    margin-right: 0.6rem;
+ }
+ header.topbar .auth> div img
+ {
+     margin-right: 0.35rem;
+ }
+
+/*In the css we will be using flex and justify content property  many times so to get rid of this of repeatations we
+ will make a class of flexn and justify as well*/
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+
+}
+
+.items-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+/* 👆 Above these classes are called UTILITY CLASSEES which can be used in HTML again and again when needed */
+/* 👇 Below we will edit h5 and h6 tags */
+h5{
+    font-family: "Raleway-black";
+    margin-bottom: 0.25rem;
+}
+h6{
+    font-family: "Raleway-Medium";
+    letter-spacing: 0.065rem;
+    color: var(--ternary);
+}
+/* 👇 To give the spacing between the text and icon of nav bar */
+.Contact  img {
+    margin-right: 1rem;
+}
+.working-hours img{
+    margin-right: 1rem;
+}
+.menubar{
+    
+    padding-bottom: 0.5rem;
+   
+}
+.menubar a{
+     box-shadow: 0 1px 0 var(--primary);/*Giving yellow Shadow below Menu Bar  */
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "Raleway-SemiBold";
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    
+    /* To give transition when cursor hover's */
+    transition: all 0.3s ease;
+    -webkit-transition : all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+   
+}
+/* We are selecting here anchor tag whose class is active  */
+a.active{
+  background: var(--primary);
+  color: var(--pure);
+}
+/* HOVER EFFECT */
+.menubar a:hover{
+    background: var(--primary);
+    color: var(--heaven);
+}
+
+    
+
+/*👇 We have created the utility class for shadow below the menubar and  for other area  */
+.magic-shadow{
+    position: relative;
+    background: var(--heaven);
+}
+/* 👇Below we have adjusted the shadow that can be seen below the menu-bar 
+.magic-shadow :after{
+    content: '';
+    display: block;
+    width: 15%;
+    height: 69px;
+    background-position: center;
+    background-image:url(/icons/shadow-sm.svg );
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -18px;
+    z-index: -1;
+}*/
+
+/* Brand name editing */
+.Welcome h2{
+    
+    color: var(--primary);
+    
+}
+/* 👇 Applying the Blur-Background image in Front page  */
+header.Front{
+    height: 600px;
+    background-image:url(/images/img/banner/b4.jpg) ;
+    padding-top: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    /* It will restrict the movement of the background image */
+    background-attachment:scroll;
+}
+header.Front.Welcome{
+    /* Giving the space below welcome */
+    margin-bottom: 0.25rem;
+}
+header.Front.Welcome span{
+    font-family: "Raleway-Bold";
+    color: var(--secondary);
+}
+/* We will be editing here H1 tag LANDING PAGE */
+header.Front h1 {
+    font-family: "Raleway-ExtraBold";
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 00.25rem;
+}
+header.Front h1 span{
+    color: var(--primary);
+    font-size: 2.5rem;
+}
+/*👇 Here we will be creating a utility class for all the buttons on the website  */
+.butn{
+    padding: 0.75rem 0.75rem;
+    border-radius : 4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -o-border-radius:4px;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    /* To give transition when cursor hover's */
+    transition: all 0.3s ease;
+    -webkit-transition : all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    /* Here transparent value is specified just to prevent the jumping effect of the button when cursor hovers */
+    border: 1px solid transparent;
+
+}
+/* Again we will create the utility class for button colors as */
+/* Yellow button */
+.butn-primary{
+
+    background: var(--primary);
+    color: var(--heaven);
+    border: 1px solid var(--primary);
+}
+/* Black button */
+.butn-secondary{
+    background: var(--secondary);
+    color: var(--heaven);
+    border: 1px solid var(--secondary);
+}
+/* Giving HOVER EFFECT to the Primary button */
+.butn-primary:hover{
+     
+     /* simply we will invert the color as background will be heaven and  text will be primary */
+     background: var(--heaven);
+     color: var(--primary);
+}
+/* Giving HOVER EFFECT to the Secondry button */
+.butn-secondary:hover{
+     
+    /* simply we will invert the color as background will be heaven and  text will be primary */
+    background: var(--heaven);
+    color: var(--secondary);
+}
+/* FEATURE TEXTS */
+.feature{
+    text-align: center;
+    padding-top: 1cm;
+}
+.feature h2{
+    font-family: "Raleway-Bold";
+    font-size: 1cm;
+    color: var(--primary);
+    font-family: "Lucidia Calligraphy";
+}
+.feature P{
+      padding-top: 0.1cm;
+      font-family: "Raleway-Medium";
+    }
+
+
+/* 👇 Product continer  */
+
+.Product-Container{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 20px;
+   /* The Below property has fixed the problem of content of new div starts from existing div the Shopping-Card  */
+   position: relative;
+   padding-bottom: 1cm;
+   
+    
+}
+
+/* 👇 Product continer  */
+.Product-box{
+    max-width: 250px;
+    padding: 8px  12px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 11.5cm;
+    width: 6cm;
+    
+}
+.Product-box:hover{
+    box-shadow: 20px 20px 30px var(--primary) ;
+    transition: 1s ease;} 
+  
+
+/* 👇 Product Image  */
+   .Product-image{
+       width: 200px;
+       margin: 20px;
+    
+    }
+    .Product-image img{
+        width: 85%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    /* 👇 PRICE */
+    .Price {
+        justify-content: space-between;
+        padding-top: 1rem;
+        display: flex;
+   }
+   /* Giving style to the CART BUTTON */
+   .Price a{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50px;
+      background-color: var(--primary);
+     text-align: center;
+     font-size: 1rem;
+      color: var(--secondary);
+      
+   }
+   .Price a:hover{
+       background-color: var(--danger);
+       transition: all ease 0.3s;
+   }
+   /*👇Product Details  */
+.Product-details span{
+    color: var(--ternary);
+    font-size: 20px;    
+}
+.Product-details h5 {
+    padding-top: 0.2cm;
+    font-size: 13px;
+    font-family: "Raleway-Medium";
+}
+/* 👇BANNER  */
+.Banner{
+    padding: 2cm 0;
+    text-align: center;
+    background-image: url(/images/img/products/—Pngtree—yellow\ background_787402.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 7px;
+    border: 1.5px solid var(--primary);
+   
+
+}
+.Banner h3{
+     font-family: "Raleway-ExtraBold";
+     padding-bottom:10px;
+     font-size: 30px;
+     color: var(--heaven);
+}
+.Banner h2{
+    font-family: "Raleway-ExtraBold";
+    padding-bottom:5px;
+    font-size: 40px;
+}
+.Banner span{
+    color: var(--pure);
+    font-size: larger;
+    
+}
+/* 👇 Below we have created a FLEX -1 utility class TO give equal space between the contents  */
+.flex-1{
+    flex: 1;
+}
+/* 👇 Giving Background Color to OUR SERVICE SECTION */
+.Our-Services{
+        background-color:var(--light);
+        padding: 1cm 0;
+        border-radius: 7px;
+        text-align: center;
+}
+/* 👇 Giving Background Color to OUR CARD WRAPER SECTION */
+.Service-Card{
+    background-color: var(--pure);
+    text-align: center;
+    padding: 2rem 1rem ;
+    position: relative;
+    padding-top: 4rem;
+    border-radius: 10px;
+    border: 1.5px solid var(--primary);
+    margin-right: 2rem;
+}
+/* SETTING THE ICON TO ITS PROPER POSTION  */
+.Service-Card .SerICON{
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
+}
+.SerContainer h1{
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.2cm;
+    font-family: "Lucidia Calligraphy";
+    padding-bottom: 1.5cm;
+}
+/* Giving style to service card description */
+.Service-Card h2{
+    padding-bottom: 0.5rem;
+    font-family: "Raleway-Bold";
+}
+.Service-Card p{
+    padding-bottom: 1.5rem;
+    font-family: "Raleway-Medium";
+}
+
+/* 👇 Giving Style to Subscribe Section */
+.Subscribe{
+    background: var(--primary);
+}
+.Subscribe h1{
+    font-family:  "Lucidia Calligraphy";
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.Subscribe p{
+    font-family: "Raleway-Medium";
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+/* 👇 Merging the button and Input in one container */
+.input-wrap{
+    background: var(--heaven);
+    display: flex;
+    padding: 0.3rem;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.input-wrap input{
+       width: 100%;
+       border: none;
+       padding: 0 1rem;
+       font-size: 1rem;
+}
+/* Making input border none otherwise it will show border while entering the text into the input field  */
+.input-wrap input:focus{
+   outline: none;
+}
+
+.input-wrap button{
+    padding: 0.8rem 2rem;
+    border: none;
+    background: var(--primary);
+    color: var(--pure);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    /* To give transition when cursor hover's */
+    transition: all 0.3s ease;
+    -webkit-transition : all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+
+}
+.input-wrap button:hover{
+    background: var(--secondary);
+    outline: none;
+}
+/* Footer */
+.Footer{
+    background: var(--footer);
+   
+}
+/* Giving the style to P tag in Fotter */
+.col{
+    color: var(--pure);
+    margin-left: 1rem;
+    
+}
+
+.Follow .icons{
+   
+    display: flex;
+    
+  }
+
+.Follow .icons i{
+ 
+    font-family: "Raleway-semibold";
+    padding: 0.7rem 0;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    
+}
+/* ALIGNING THE FOOTER TO ITS RIGHT POSITION */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Aligning  the about section in one column */
+footer .col{
+    display: flex;
+    flex-direction: column;
+   align-items: flex-start;
+   margin: 20px 20px;
+}
+/* Giving style to each columns one by one */
+.install h3{
+    padding-bottom:1rem;
+    
+}
+.install p{
+    padding-bottom:1rem;
+}
+.col a{
+    color: var(--light);
+    text-decoration: none;
+    padding-top: 0.5rem;
+
+}
+.col h3{
+    color: var(--primary);
+    
+}
+.frow{
+    display: flex;
+    display: block;
+}
+
+
+/* SHOP PAGE CSS STARTS FROM HERE */ 
+
+/* 👇 Applying the Background image in Shop page  */
+header.ShopFront{
+    padding: 2cm 0;
+    text-align: center;
+    background-image: url(/images/img/products/—Pngtree—yellow\ background_787402.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 7px;
+    border: 1.5px solid var(--primary);
+   
+    /* It will restrict the movement of the background image */
+    background-attachment:scroll;
+}
+.ShopBanner h3
+{
+  padding-bottom: 1rem;
+  font-family: "Raleway-Bold";
+  color: var(--pure);
+  font-size: 30px;
+}
+.ShopBanner h2{
+    font-family: "Raleway-ExtraBold";
+    padding-bottom: 1rem;
+    font-size: 40px;
+
+}
+.ShopBanner span{
+    font-family: "Raleway-ExtraBold";
+    padding-bottom: 1rem;
+    color: var(--danger);
+    
+}
+/* Pagination  Style */
+.Pagination{
+    text-align: center;
+    padding-bottom: 2rem;
+    
+   
+}
+.Pagination a{
+    font-family: "Raleway-ExtraBold";
+     font-size: 25px;
+    padding: 10px 15px;
+     text-decoration: none;
+      border: 2px solid var(--primary);
+     border-radius: 4px;
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+
+/* 👇 Single Product Details Page Style */
+.ProDetails{
+    padding: 2rem 3rem;
+    display: flex;
+}
+
+.ProDetails .singleproImg{
+     padding: 1rem 1rem;
+    width: 30%;
+     margin-right: 50px;
+}
+.small_Img_Group
+{   padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.small{
+    border: 0.6px solid var(--primary);
+    border-radius: 5px;
+    padding : 0.25rem  0.25rem;
+    /* flex basis sets the intial width of box */
+    flex-basis: 30%;
+    cursor: pointer;
+    justify-content: space-between;
+}
+/* 👇Single Product Details  */
+
+.SingleProDetail
+{
+    width: 50%;
+    padding-top: 40px;
+}
+.SingleProDetail h6{
+    font-size: 15px;
+}
+.SingleProDetail h4{
+    font-family: "Raleway-Bold";
+    font-size: 20px;
+    padding: 1rem;
+    margin-left: -1rem;
+}
+.SingleProDetail select{
+    display: block;
+    padding: 5px 10px;
+    font-family: "Raleway-Bold";
+    outline: none;
+    margin: 15px -0.1rem;
+    border-radius: 2px;
+}
+.SingleProDetail input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+    border-radius: 3px;
+}
+.SingleProDetail span{
+    line-height: 0.2;
+    font-family: "Raleway-Medium";
+    color: var(--ternary);
+}
+
+
+
+
+/*👇 BLOG PAGR STYLING 👇 */
+.BlogFront{
+    height: 200px;
+    background-image:url(/images/img/MyBlog/tm-about-img_edited.jpg) ;
+    padding-top: 1.5rem;
+    background-repeat: no-repeat;
+    background-position:center;
+    overflow: hidden;
+    /* It will restrict the movement of the background image */
+    background-attachment:scroll;
+}
+.BlogHeading
+{   
+    text-align: center;
+}
+.BlogHeading h2{
+    font-family: "Lucidia Calligraphy";
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+.BlogHeading span{
+    color:var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.heading-section {
+    text-align: center;
+    padding: 100px 0 80px 0;
+    font-family: "Lucidia Calligraphy";
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--secondary);
+}
+.image-post{
+    display: block;
+   }
+   .product-title {
+       padding: 1rem;
+   }
+   .product-title h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    display: inline-block;
+    margin-right: 20px;
+    border-right: 1.5px solid #ddd;
+    padding-right: 20px;
+    padding: 0.5rem;
+}
+.product-title p{
+    color: var(--secondary);
+}
+.product-item{
+    width: 68%;
+    background-position: center;
+}
+.product-title span {
+    display: inline-block;
+    font-size: 13px;
+    color:var(--primary);
+    font-size: 20px;
+}
+.product-content p {
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+/* COMMENT AREA  */
+.comments {
+    margin-top: 30px;
+}
+.comment-section h4{
+      color:var(--primary);
+}
+.all-comments {
+    margin-top: 30px;
+    margin-bottom: 40px;
+   
+}
+.author-thumb {
+    float: left;
+    margin-right: 30px;
+    padding-top :2rem; 
+   
+    
+}
+.comment-body {
+    background-color: #f3f3f3;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    
+}
+.comment-body p {
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #666;
+}
+.replyed-form {
+    margin-left: 30px;
+}
+/* Leave Comment area */
+.leave-comment h4 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/* FORM AREA */
+.leave-form input, textarea {
+    padding: 10px;
+    border: 1px solid #e2e2e2;
+    border-radius: 2px;
+    margin-top: 25px;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 300;
+    color:var(--footer);
+    outline: none;
+}
+/* Utility Class for each input area */
+.ucol{
+    width: 33.33333333%;
+}
+.row {
+    margin-right:140px;
+    margin-left: 140px;
+}
+textarea {
+    height: 165px;
+    max-height: 180px;
+    max-width: 900px;
+    line-height: 18px;
+    width: 100%;
+    margin-left: -9rem;
+    margin-bottom: 1rem;}
+/* 👇 PRODUCTS PAGE  */
+.Product-heading h2 {
+
+    font-size: 1.5cm;
+    color: var(--primary);
+    font-family: "Lucidia Calligraphy";
+    text-align: center;
+    padding-top: 1.5rem;
+}
+.Product-heading .underimg{
+   padding-left: 11.6cm;
+ 
+}
+
+
+/* 👇 About us page styling */
+.about-head
+{
+    display: flex;
+}
+
+.aboutimg{
+    padding: 40px 40px;
+}
+.about-head div{
+    padding: 40px 40px;
+}
+.about-content h2{
+    font-family: "Lucidia Calligraphy";
+    padding-bottom: 10px;
+    font-size: 1.5cm;
+}
+/*👇 Contact us page styling */
+.contact-details{
+    padding: 20px 20px;
+    display: flex;
+}
+.details{
+    padding: 160px 40px; 
+   
+   
+   
+}
+.details h3{
+    padding: 10px 20px;
+    margin-left: -20px;
+}
+.map{
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+/* Targeting the form of contact us page */
+.form-details form{
+    margin-left: 40px;
+    padding-bottom: 30px;
+}
+.form-details h2{
+    padding: 20px;
+    margin-left: -20px;
+}
+.form-details span{
+    font-family: "Raleway-Medium";
+}
+.form-details input{
+    width: 40%;
+    padding: 12px 15px;
+    outline: none;
+}
+
+/* Registration FORM */
